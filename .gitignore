@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+
+# Datos crudos (DANE)
+data/raw/*.zip
+data/raw/*.DTA
+data/raw/*.csv
+
+# Artefactos pesados (se gestionan con DVC)
+artifacts/models/*.joblib
+artifacts/models/*.npy
+artifacts/models/*.pkl
+
+# Sistema
+.DS_Store
+Thumbs.db
