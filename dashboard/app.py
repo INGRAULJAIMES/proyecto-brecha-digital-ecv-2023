@@ -1,7 +1,15 @@
+import sys
+import os
+from pathlib import Path
+
+# Añadir la raíz del proyecto al sys.path para que Streamlit Cloud encuentre 'dashboard'
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 import streamlit as st
 import plotly.express as px
 from dashboard.data_loader import get_validated_data, DataValidationError
 from dashboard.config import CLUSTER_NAMES
+
 
 st.set_page_config(page_title="Brecha Digital Colombia", layout="wide", page_icon="📊")
 
