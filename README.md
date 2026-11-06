@@ -37,13 +37,12 @@ La política pública asume que "Estrato 1 = Exclusión Digital". Los datos demu
 - **Si se actúa:** Cada peso invertido en hardware o energía para los excluidos tendrá un impacto medible en su inclusión digital, porque se ataca la barrera real.
 
 ### 🚀 Dashboard Interactivo
-Puedes explorar los resultados de forma visual e interactiva en tiempo real:
 
-<a href="https://proyecto-brecha-digital-ecv-2023.streamlit.app/" target="_blank">
-  <img src="artifacts/figures/dashboard_preview.png" alt="Vista previa del Dashboard" width="800">
-</a>
+Explora los resultados del modelo de Machine Learning en tiempo real a través de una interfaz web interactiva.
 
-> **[Haz clic aquí para abrir el Dashboard Interactivo completo](https://proyecto-brecha-digital-ecv-2023.streamlit.app/)**
+👉 **[Haz clic aquí para abrir el Dashboard Interactivo completo](https://proyecto-brecha-digital-ecv-2023.streamlit.app/)**
+
+[![Vista previa del Dashboard](artifacts/figures/dashboard_preview.png)](https://proyecto-brecha-digital-ecv-2023.streamlit.app/)
 
 <br>
 
