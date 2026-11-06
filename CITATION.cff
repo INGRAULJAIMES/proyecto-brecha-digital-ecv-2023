@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Si usas este código o los hallazgos de este proyecto, por favor cita:"
+authors:
+  - family-names: "Jaimes"
+    given-names: "Raúl Alberto"
+title: "Segmentación No Supervisada y Validación Predictiva: Brecha Digital en Colombia"
+version: 1.0.0
+date-released: 2026-11-05
+license: MIT
+url: "https://github.com/INGRAULJAIMES/proyecto-brecha-digital-ecv-2023"
+keywords:
+  - machine-learning
+  - clustering
+  - crisp-dm
+  - brecha-digital
+  - colombia
+references:
+  - type: data
+    title: "Encuesta de Calidad de Vida (ECV) 2023"
+    authors:
+      - name: "Departamento Administrativo Nacional de Estadística (DANE)"
+    repository: "https://microdatos.dane.gov.co/index.php/catalog/827"
+    url: "https://microdatos.dane.gov.co/index.php/catalog/827"
+    year: 2023

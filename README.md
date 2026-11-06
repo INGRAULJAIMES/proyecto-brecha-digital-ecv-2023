@@ -113,7 +113,14 @@ pip install -r requirements.txt
 # 04_modeling/02_modelado.ipynb
 # 05_evaluation/03_perfilamiento_supervisado.ipynb
 ```
-> **⚠️ Nota sobre datos crudos:** Por políticas de tamaño, `data/raw/` no está incluido. Para reproducir el pipeline, descargue los microdatos de la ECV 2023 desde el sitio oficial del DANE y colóquelos en `data/raw/`.
+> **⚠️ Nota sobre datos crudos:** Los microdatos originales **no se incluyen** en este repositorio por su tamaño y para respetar las políticas de distribución del DANE. 
+
+<br>
+
+**Para reproducir el pipeline, siga estos pasos:**
+> 1.  Consulte las fuentes oficiales y las instrucciones de descarga en **[docs/data_sources.md](docs/data_sources.md)**.
+> 2.  Descargue los archivos `Caracteristicas Hogar y Tenencia TIC ECV 2023.csv` y el archivo `.DTA` de Vivienda.
+> 3.  Colóquelos en la carpeta `data/raw/` antes de ejecutar los notebooks.
 
 ### 📚 Gobernanza y Documentación
 - [Diccionario de Datos](docs/data_dictionary.md)
