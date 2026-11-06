@@ -2,7 +2,17 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.0+-150458.svg)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-1.24+-013243.svg)](https://numpy.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B.svg)](https://streamlit.io/)
+[![Plotly](https://img.shields.io/badge/Plotly-5.18+-3F4F75.svg)](https://plotly.com/)
 [![CRISP-DM](https://img.shields.io/badge/Methodology-CRISP--DM-green.svg)]()
+[![PCA](https://img.shields.io/badge/Dimensionality-PCA-purple.svg)]()
+[![K-Means](https://img.shields.io/badge/Clustering-KMeans-purple.svg)]()
+[![GMM](https://img.shields.io/badge/Clustering-GMM-purple.svg)]()
+[![Isolation Forest](https://img.shields.io/badge/Anomaly-IsolationForest-red.svg)]()
+[![Random Forest](https://img.shields.io/badge/Supervised-RandomForest-blue.svg)]()
+[![Logistic Regression](https://img.shields.io/badge/Supervised-LogisticRegression-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Autor:** Raúl Alberto Jaimes | **Contexto:** Maestría en Estadística Aplicada y Ciencia de Datos (Universidad El Bosque)
@@ -98,6 +108,8 @@ flowchart LR
 | `04_modeling/` | Notebook de PCA, K-Means, GMM, Isolation Forest. |
 | `05_evaluation/` | Notebook de validación supervisada, Odds Ratios. |
 | `06_deployment/` | Plan de acción de política pública. |
+| `dashboard/` | Aplicación web interactiva (Streamlit) con validación y pruebas. |
+| `src/` | Código fuente modular y scripts de descarga de datos. |
 | `docs/` | Gobernanza (auditorías, decisiones, limitaciones, manifiesto de datos). |
 | `data/` | Datos procesados e intermedios (raw excluido por tamaño). |
 | `artifacts/models/` | Modelos `.joblib` y matrices `.npy`. |
@@ -149,4 +161,5 @@ pip install -r requirements.txt
 - **Código:** MIT License. Ver [LICENSE](LICENSE).
 - **Citación:** Si usas este código o los hallazgos, cita: 
 `Jaimes, R. A. (2026). Segmentación No Supervisada y Validación Predictiva: Brecha Digital en Colombia. GitHub.`
+
 
