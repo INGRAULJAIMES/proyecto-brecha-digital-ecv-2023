@@ -1,4 +1,3 @@
-```markdown
 # Segmentación No Supervisada y Validación Predictiva: Brecha Digital en Colombia
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
@@ -9,11 +8,12 @@
 **Autor:** Raúl Alberto Jaimes | **Contexto:** Maestría en Estadística Aplicada y Ciencia de Datos (Universidad El Bosque)
 
 > **📌 Navegación por perfil:**
-> - **Si eres reclutador, gerente o tomador de decisiones no técnico:** lee el **[Bloque 1 · Impacto de Focalización](#-bloque-1-impacto-de-focalización-y-ahorro-potencial)**.
-> - **Si eres estadístico, científico de datos o jurado de maestría:** salta al **[Bloque 2 · Rigor Estadístico](#-bloque-2-rigor-estadístico-y-ciencia-de-datos)**.
-> - **Si eres desarrollador o quieres replicar el pipeline:** ve al **[Bloque 3 · Estructura y Reproducibilidad](#-bloque-3-estructura-del-repositorio-y-reproducibilidad)**.
+> - **Si eres reclutador, gerente o tomador de decisiones no técnico:** lee el **[Bloque 1 · Impacto de Focalización](#bloque-1)**.
+> - **Si eres estadístico, científico de datos o jurado de maestría:** salta al **[Bloque 2 · Rigor Estadístico](#bloque-2)**.
+> - **Si eres desarrollador o quieres replicar el pipeline:** ve al **[Bloque 3 · Estructura y Reproducibilidad](#bloque-3)**.
 
 ---
+<a id="bloque-1"></a>
 ## 📊 Bloque 1: Impacto de Focalización y Ahorro Potencial
 
 **TL;DR:** Este proyecto analizó a 178,993 colombianos y descubrió que la política actual de subsidiar internet "por estrato" es ineficiente. El **11.9% de la población ya está plenamente incluida digitalmente** y no necesita subsidio. El **29.5% no tiene ni celular ni energía formal**, por lo que un subsidio de datos móviles es inútil. La recomendación es **reasignar los recursos de los ya incluidos hacia infraestructura y hardware para los excluidos**.
@@ -24,9 +24,9 @@ La política pública asume que "Estrato 1 = Exclusión Digital". Los datos demu
 ### El Hallazgo Clave (Tabla de Decisión)
 | Perfil de la Población | ¿Qué % de la población es? | ¿Cuál es su realidad? | ¿Qué debería hacer el Estado? |
 |---|---|---|---|
-| **Élite Digital** (Ya incluidos) | **11.9%** | 83% usa banca digital y tiene smartphone. | **Dejar de subsidiarlos.** Ahorro fiscal inmediato. |
+| **Élite Digital** (Ya incluidos) | **11.9%** | 83% usa banca digital y tiene smartphone. | **Reasignación potencial de recursos.** No requieren subsidios de conectividad. |
 | **Conectados sin Banca** | **43.1%** | Tienen smartphone e internet, pero **0% usa banca digital**. | **Educación financiera**, no datos móviles. |
-| **Exclusión Severa** | **29.5%** | **0% tiene smartphone.** El 8% no tiene energía formal (planta eléctrica o pirata). | **Paneles solares y dotación de celulares.** |
+| **Exclusión Severa** | **29.5%** | **0% tiene smartphone.** El 8% depende de plantas eléctricas o conexiones informales (sin red formal). | **Paneles solares y dotación de celulares.** |
 | **Adultos Mayores** | **15.5%** | Tienen celular, pero solo el **38% es smartphone**. | **Renovación tecnológica** (entregar smartphones). |
 
 ### La Decisión Recomendada (El "Qué Hacer")
@@ -36,12 +36,9 @@ La política pública asume que "Estrato 1 = Exclusión Digital". Los datos demu
 - **Si no se actúa:** Se seguirán gastando recursos en personas que ya están conectadas, mientras las zonas rurales sin energía quedan perpetuamente excluidas.
 - **Si se actúa:** Cada peso invertido en hardware o energía para los excluidos tendrá un impacto medible en su inclusión digital, porque se ataca la barrera real.
 
-<br>
-
 ---
 
-<br>
-
+<a id="bloque-2"></a>
 ## 🔬 Bloque 2: Rigor Estadístico y Ciencia de Datos
 
 ### Pipeline CRISP-DM
@@ -63,8 +60,8 @@ flowchart LR
 | **ARI (Bootstrap)** | 0.9254 | Los 6 perfiles son **estables**: no cambian si se toma otra muestra aleatoria. |
 | **ARI (K-Means vs GMM)** | 0.7306 | Dos algoritmos distintos encontraron **la misma estructura**. No es un artefacto. |
 | **F1-Macro (Random Forest)** | 0.52 | **Validación negativa:** La demografía **no puede predecir** el perfil. Esto demuestra que el comportamiento digital es una dimensión oculta que el clustering sí capturó. |
-| **Odds Ratio (Smartphone)** | 64.1 | Tener smartphone multiplica por **64** la probabilidad de usar banca digital. Es la barrera más grande. |
-| **Odds Ratio (Mujer)** | 0.85 | A igual estrato y hardware, ser mujer reduce la probabilidad de usar banca en un **15%**. Brecha de género estructural. |
+| **Odds Ratio (Smartphone)** | 64.1 | Tener smartphone multiplica por **64** las *chances* (odds) de usar banca digital. Es la barrera más grande. |
+| **Odds Ratio (Mujer)** | 0.85 | A igual estrato y hardware, ser mujer reduce las *chances* (odds) de usar banca en un **15%**. Brecha de género estructural. |
 | **Pseudo-R² (McFadden)** | 0.166 | La demografía y el hardware explican solo el **16.6%** de la varianza. El **83.4%** restante es comportamiento latente, capturado por los clústeres. |
 
 ### Decisiones Metodológicas Clave
@@ -78,10 +75,9 @@ flowchart LR
 - **Supuestos geométricos:** K-Means asume clústeres esféricos; GMM asume gaussianas. No se exploraron formas no convexas.
 - **Imputación lógica:** Se asumió que "sin celular → sin smartphone → sin internet". Es el diseño del DANE, pero es una aproximación.
 
-<br>
-
 ---
 
+<a id="bloque-3"></a>
 ## 📂 Bloque 3: Estructura del Repositorio y Reproducibilidad
 
 | Carpeta | Contenido |
@@ -104,7 +100,12 @@ cd proyecto-brecha-digital-ecv-2023
 
 # 2. Crear entorno e instalar dependencias
 python -m venv venv
-venv\Scripts\activate  # Windows
+
+# Activar entorno (Windows):
+venv\Scripts\activate
+# Activar entorno (Mac/Linux):
+source venv/bin/activate
+
 pip install -r requirements.txt
 
 # 3. Ejecutar notebooks en orden
@@ -129,9 +130,6 @@ pip install -r requirements.txt
 ## ⚖️ Licencia y Datos
 - **Datos:** ECV 2023 – DANE Colombia (Uso público).
 - **Código:** MIT License. Ver [LICENSE](LICENSE).
-- **Citación:** Si usas este código o los hallazgos, cita: `Jaimes, R. A. (2026). Segmentación No Supervisada y Validación Predictiva: Brecha Digital en Colombia. GitHub.`
+- **Citación:** Si usas este código o los hallazgos, cita: 
+`Jaimes, R. A. (2026). Segmentación No Supervisada y Validación Predictiva: Brecha Digital en Colombia. GitHub.`
 
-
-<br>
-
----
